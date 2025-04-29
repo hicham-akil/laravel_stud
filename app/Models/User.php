@@ -22,6 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
+    public function Order(){
+        return $this->hasMany(related: Order::class,foreignKey:     'user_id');
+    }
   
 }

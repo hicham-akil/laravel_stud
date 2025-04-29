@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('order_name');
+            $table->foreignId('user_id')->delete('cascad');
             $table->timestamps();
         });
     }
